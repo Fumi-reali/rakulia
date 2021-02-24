@@ -10,7 +10,8 @@ body {
 }
 
 @media screen and (min-width:480px) {
-  body {
+  .firstview {
+    letter-spacing: -1px;
   }
 }
 
@@ -19,8 +20,3 @@ body {
   margin: 4px 8px 10px 8px;
 }
 
-@media screen and (max-width:1160px) { 
-  .header a {
-    font-size:0px;
-  }
-}
