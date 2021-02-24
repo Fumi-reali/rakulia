@@ -6,6 +6,7 @@
     <title>ラクリア法人証明書</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" /> -->
     <link rel="stylesheet" href="./css/bulma.min.css">
     <link rel="stylesheet" href="./style/style.css" />
@@ -24,8 +25,7 @@
 <body class="hero">
     <nav id="navbar hero-head">
         <div class="navbar-brand">
-            <div class="navbar-item"> <span><img src="./img/logo.png" style="height: 35px;" /></span><span
-                    class="header">法人証明書</span>
+            <div class="navbar-item"> <span><img src="./img/logo.png" class="logo"></span>
             </div>
             <div class="navbar-end">
                 <ul class="navbar-item is-hidden-touch header">
@@ -37,13 +37,13 @@
                     <li class="navbar-item"><a href="#faq">よくある質問</a></li>
                 </ul>
                 <div class="navbar-item">
-                    <a href="/login" class="button is-primary is-small-mobile">ログイン</a>
+                    <a href="/login" class="button nav-btn is-primary is-small-mobile">ログイン</a>
                 </div>
     </nav>
     <div class="hero-body is-fullheight-with-navbar">
         <div class="firstview">
             <div class="columns">
-                <div class="column is-7-desktop has-text-left">
+                <div class="column is-7-desktop has-text-left-desktop">
                     <div class="has-text-primary">
                         <span class="is-size-1-desktop is-size-3 has-text-weight-bold">法人登記簿謄本</span><span
                             class="is-size-3-desktop is-size-4">を</span><br><span
@@ -59,54 +59,135 @@
                         <span class="has-text-weight-bold">初回<span class="is-size-5">540</span>円/(税別)</span>
                     </div>
                     <div>
-                        <span class="has-text-weight-light is-size-7">※ 合計2通以上のご請求で10%割引<br>※ 2通目以降は980円/通<br>※
+                        <span class="has-text-weight-light is-size-7 has-text-left">※ 合計2通以上のご請求で10%割引<br>※
+                            2通目以降は980円/通<br>※
                             2〜3営業日でお届けします</span>
                     </div>
                 </div>
                 <div class="column is-5-desktop has-text-centered"><img src="./img/main.png"></div>
             </div>
         </div>
-        <div class="tile is-ancestor is-11 is-offset-1">
-            <div class="tile is-vertical is-parent">
-                <div class="tile is-child box">
-                    <p class="title">One</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                        tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        <div class="search-block">
+            <div class="container">
+                <div class="search-detail has-text-weight-semibold">
+                    最短1分でご請求
                 </div>
-                <div class="tile is-child box">
-                    <p class="title">Two</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                        tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                <div class="search-detail-sub">住所は不要。社名か法人番号で検索できます。</div>
+            </div>
+            <div class="mx-6">
+                <div class="field has-addons has-addons-centered">
+                    <p class="control">
+                        <span class="select">
+                            <select class="is-hovered">
+                                <option value="" selected="">全国から</option>
+                                <option value="01">北海道</option>
+                                <option value="02">青森県</option>
+                                <option value="03">岩手県</option>
+                                <option value="04">宮城県</option>
+                                <option value="05">秋田県</option>
+                                <option value="06">山形県</option>
+                                <option value="07">福島県</option>
+                                <option value="08">茨城県</option>
+                                <option value="09">栃木県</option>
+                                <option value="10">群馬県</option>
+                                <option value="11">埼玉県</option>
+                                <option value="12">千葉県</option>
+                                <option value="13">東京都</option>
+                                <option value="14">神奈川県</option>
+                                <option value="15">新潟県</option>
+                                <option value="16">富山県</option>
+                                <option value="17">石川県</option>
+                                <option value="18">福井県</option>
+                                <option value="19">山梨県</option>
+                                <option value="20">長野県</option>
+                                <option value="21">岐阜県</option>
+                                <option value="22">静岡県</option>
+                                <option value="23">愛知県</option>
+                                <option value="24">三重県</option>
+                                <option value="25">滋賀県</option>
+                                <option value="26">京都府</option>
+                                <option value="27">大阪府</option>
+                                <option value="28">兵庫県</option>
+                                <option value="29">奈良県</option>
+                                <option value="30">和歌山県</option>
+                                <option value="31">鳥取県</option>
+                                <option value="32">島根県</option>
+                                <option value="33">岡山県</option>
+                                <option value="34">広島県</option>
+                                <option value="35">山口県</option>
+                                <option value="36">徳島県</option>
+                                <option value="37">香川県</option>
+                                <option value="38">愛媛県</option>
+                                <option value="39">高知県</option>
+                                <option value="40">福岡県</option>
+                                <option value="41">佐賀県</option>
+                                <option value="42">長崎県</option>
+                                <option value="43">熊本県</option>
+                                <option value="44">大分県</option>
+                                <option value="45">宮崎県</option>
+                                <option value="46">鹿児島県</option>
+                                <option value="47">沖縄県</option>
+                                <option value="99">国外</option>
+                            </select>
+                        </span>
+                    </p>
+                    <p class="control has-icons-left is-expanded">
+                        <input class="input" type="text" placeholder="例）株式会社リアリゼイション">
+                        <span class="icon is-medium is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+                    <p class="control is-fullwidth">
+                        <button class="button is-fullwidth">検索</button>
+                    </p>
                 </div>
+            </div>
+            <div>
+                <img src="https://ttzk.graffer.jp/img/corporate-certs/flow.png">
+            </div>
+        </div>
+    </div>
+    <div class="tile is-ancestor is-11 is-offset-1">
+        <div class="tile is-vertical is-parent">
+            <div class="tile is-child box">
+                <p class="title">One</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                    tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+            <div class="tile is-child box">
+                <p class="title">Two</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                    tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
 
-                <div class="tile is-child">
-                    <div class="tile is-child box">
-                        <p class="title">Three</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar,
-                            at
-                            pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus
-                            ut.
-                            Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis
-                            ut
-                            quam.</p>
-                        <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
-                            Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
-                            sollicitudin
-                            felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit
-                            sit
-                            amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at
-                            volutpat
-                            tortor.</p>
-                        <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus
-                            dolor
-                            consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
-                            ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
-                            semper
-                            leo.</p>
-                    </div>
+            <div class="tile is-child">
+                <div class="tile is-child box">
+                    <p class="title">Three</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar,
+                        at
+                        pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus
+                        ut.
+                        Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis
+                        ut
+                        quam.</p>
+                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
+                        Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
+                        sollicitudin
+                        felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit
+                        sit
+                        amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at
+                        volutpat
+                        tortor.</p>
+                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus
+                        dolor
+                        consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
+                        ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
+                        semper
+                        leo.</p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer class="footer">
         <div class="content has-text-centered">

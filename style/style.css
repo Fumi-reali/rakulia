@@ -6,17 +6,43 @@ body {
   font-style: normal;
   font-size: 14px;
   max-width: 1160px;
-  margin:auto;
+  margin: auto;
+  text-align: center;
+  line-height: 1.5;
 }
 
-@media screen and (min-width:480px) {
-  .firstview {
+/* navigation bar */
+.logo {
+  min-height: 35px;
+  margin: 4px 4px;
+}
+@media screen and (min-width: 480px) {
+  .hero-body {
     letter-spacing: -1px;
   }
 }
-
+.nav-btn {
+  margin-right: -100px;
+}
 .header {
   color: rgba(0, 0, 0, 1);
-  margin: 4px 8px 10px 8px;
+  margin: 8px 8px 10px 8px;
 }
 
+.search-block {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  background: #239DDA;
+}
+
+.search-detail{
+  padding-top: 1rem;
+  color:#ffffff;
+  letter-spacing: 2px;
+}
+.search-detail-sub{
+  padding-bottom: 1rem;
+  color:#ffffff;
+  letter-spacing: 1px;
+}
