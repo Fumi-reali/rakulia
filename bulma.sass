@@ -2,7 +2,13 @@
 
 // 追記 ///////////////////////////
 $primary: #239DDA
-$link: rgba(87, 87, 87, 1);
+$radius-small:      1px;
+$radius:            2px;
+$radius-large:      2px;
+$spacing-shortcuts: ("margin": "mg");
+$spacing-horizontal: "h";
+$spacing-vertical: null;
+$spacing-values: ("small": 10px, "medium": 30px, "large": 60px);
 ///////////////////////////////////
 
 /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
@@ -14,3 +20,5 @@ $link: rgba(87, 87, 87, 1);
 @import "sass/grid/_all"
 @import "sass/helpers/_all"
 @import "sass/layout/_all"
+// Import Extensions
+@import "sass/extensions/src/sass/index"

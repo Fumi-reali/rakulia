@@ -2,47 +2,75 @@ body {
   background-color: white;
   color: rgba(87, 87, 87, 1);
   font-family: noto-sans-cjk-jp, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-size: 14px;
-  max-width: 1160px;
-  margin: auto;
   text-align: center;
-  line-height: 1.5;
+  /* letter-spacing: 0px; */
+}
+@media screen and (max-width: 1000px) {
+  /* .header {
+    letter-spacing: -1px;
+    font-size: 9px;
+  } */
 }
 
 /* navigation bar */
 .logo {
-  min-height: 35px;
-  margin: 4px 4px;
-}
-@media screen and (min-width: 480px) {
-  .hero-body {
-    letter-spacing: -1px;
-  }
 }
 .nav-btn {
-  margin-right: -100px;
+  font-size: 14px;
+  margin: 8px 0px 10px 0px;
+  padding: 0 1.5rem;
 }
 .header {
-  color: rgba(0, 0, 0, 1);
   margin: 8px 8px 10px 8px;
+  color: rgba(87, 87, 87, 1);
 }
 
+/* First View */
+
+.maru {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-flow: column wrap;
+  vertical-align: top;
+  position: flex;
+}
+.size_normal {
+  width: 50px;
+  height: 65px;
+  margin: -20px 5px;
+}
+.letter3 {
+  font-size: 22px;
+  line-height: 1.5em;
+}
+.sky1 {
+  color: rgba(87, 87, 87, 1);
+  border: 5px solid #239dda;
+}
 .search-block {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin: 0;
-  background: #239DDA;
+  margin-top: 2rem;
+  padding: 1em 1em 3em 1em;
+  background: #239dda;
+  box-shadow: 0px 1px 5px 1px #999;
 }
-
-.search-detail{
-  padding-top: 1rem;
-  color:#ffffff;
+.search-detail {
+  color: #ffffff;
   letter-spacing: 2px;
 }
-.search-detail-sub{
+.search-detail-sub {
   padding-bottom: 1rem;
-  color:#ffffff;
+  color: #ffffff;
   letter-spacing: 1px;
+}
+.search-input {
+  width: 50%;
+}
+
+.search-btn {
+  margin-left: 5px;
 }

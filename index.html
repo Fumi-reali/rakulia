@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>ラクリア法人証明書</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer></script>
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" /> -->
     <link rel="stylesheet" href="./css/bulma.min.css">
     <link rel="stylesheet" href="./style/style.css" />
@@ -19,180 +19,478 @@
             },
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
+
+        var request = new XMLHttpRequest();
+
+        request.open('GET', 'https://opendata.resas-portal.go.jp/api/v1/prefectures', true);
+        request.responseType = 'json';
+
+        request.onload = function () {
+            var data = this.response;
+            console.log(data);
+        };
+
+        request.send();
     </script>
 </head>
 
-<body class="hero">
-    <nav id="navbar hero-head">
-        <div class="navbar-brand">
-            <div class="navbar-item"> <span><img src="./img/logo.png" class="logo"></span>
-            </div>
-            <div class="navbar-end">
-                <ul class="navbar-item is-hidden-touch header">
-                    <li class="navbar-item"><a href="#service">サービスについて</a></li>
-                    <li class="navbar-item"><a href="#feature">特徴</a></li>
-                    <li class="navbar-item"><a href="#plan">料金プラン</a></li>
-                    <li class="navbar-item"><a href="#flow">利用の流れ</a></li>
-                    <li class="navbar-item"><a href="#history">到来のコストについて</a></li>
-                    <li class="navbar-item"><a href="#faq">よくある質問</a></li>
-                </ul>
-                <div class="navbar-item">
-                    <a href="/login" class="button nav-btn is-primary is-small-mobile">ログイン</a>
+<body>
+    <nav id="navbar">
+        <div class="container is-max-widescreen">
+            <div class="navbar-brand">
+                <div class="navbar-item"> <span><img src="./img/logo.png" class="logo""></span>
+                </div>
+                <div class=" navbar-end">
+                        <ul class="navbar-item is-hidden-touch header">
+                            <li class="navbar-item"><a href="#service">サービスについて</a></li>
+                            <li class="navbar-item"><a href="#feature">特徴</a></li>
+                            <li class="navbar-item"><a href="#plan">料金プラン</a></li>
+                            <li class="navbar-item"><a href="#flow">利用の流れ</a></li>
+                            <li class="navbar-item"><a href="#history">到来のコストについて</a></li>
+                            <li class="navbar-item"><a href="#faq">よくある質問</a></li>
+                        </ul>
+                        <div class="navbar-item">
+                            <a href="/login" class="button nav-btn is-primary">ログイン</a>
+                        </div>
                 </div>
     </nav>
-    <div class="hero-body is-fullheight-with-navbar">
-        <div class="firstview">
-            <div class="columns">
-                <div class="column is-7-desktop has-text-left-desktop">
+    <section>
+        <div class="container is-max-widescreen">
+            <div class="columns mg-small">
+                <div class="column is-7-desktop has-text-left-tablet">
                     <div class="has-text-primary">
-                        <span class="is-size-1-desktop is-size-3 has-text-weight-bold">法人登記簿謄本</span><span
-                            class="is-size-3-desktop is-size-4">を</span><br><span
-                            class="is-size-1-desktop is-size-3 has-text-weight-bold">オンライン</span><span
-                            class="is-size-3-desktop is-size-4">で</span><span
-                            class="is-size-1-desktop is-size-3 has-text-weight-bold">カンタン取得！</span>
+                        <span class="is-size-2-tablet is-size-4 has-text-weight-bold">法人登記簿謄本</span><span
+                            class="is-size-3-tablet is-size-4">を</span><br><span
+                            class="is-size-2-tablet is-size-4 has-text-weight-bold">オンライン</span><span
+                            class="is-size-3-tablet is-size-4">で</span><span
+                            class="is-size-2-tablet is-size-4 has-text-weight-bold">カンタン取得！</span>
                     </div>
-                    <div class="my-3 is-size-5-desktop is-size-6">
-                        <span>法務局に行く面倒な手間・交通費がゼロ！<br>たったの1分で法人登記簿謄本をお取り寄せできます。</span>
+                    <div class="my-3 is-size-5-desktop is-size-6 has-text-weight-semibold mg-small">
+                        <span>法務局に行く面倒な手間・交通費がゼロ！</span><br>たったの1分で法人登記簿謄本をお取り寄せできます。</span>
                     </div>
-                    <div class="is-size-6-desktop is-size-6">
-                        <span class="mr-3">登記簿謄本の郵送​</span>
+                    <div class="is-size-6-desktop is-size-7 mgh-small">
+                        <span>登記簿謄本の郵送　​</span>
                         <span class="has-text-weight-bold">初回<span class="is-size-5">540</span>円/(税別)</span>
                     </div>
-                    <div>
+                    <div class="mgh-small">
                         <span class="has-text-weight-light is-size-7 has-text-left">※ 合計2通以上のご請求で10%割引<br>※
                             2通目以降は980円/通<br>※
                             2〜3営業日でお届けします</span>
+
                     </div>
                 </div>
-                <div class="column is-5-desktop has-text-centered"><img src="./img/main.png"></div>
+                <div class="column is-5-desktop has-text-centered">
+                    <img src="./img/main.png">
+                </div>
             </div>
-        </div>
-        <div class="search-block">
-            <div class="container">
-                <div class="search-detail has-text-weight-semibold">
+    </section>
+    <!-- 検索 -->
+    <section class="search-block">
+        <div class="container is-max-widescreen">
+            <div class="mg-small">
+                <div class="is-size-4 search-detail has-text-weight-semibold">
                     最短1分でご請求
                 </div>
                 <div class="search-detail-sub">住所は不要。社名か法人番号で検索できます。</div>
-            </div>
-            <div class="mx-6">
-                <div class="field has-addons has-addons-centered">
-                    <p class="control">
-                        <span class="select">
-                            <select class="is-hovered">
-                                <option value="" selected="">全国から</option>
-                                <option value="01">北海道</option>
-                                <option value="02">青森県</option>
-                                <option value="03">岩手県</option>
-                                <option value="04">宮城県</option>
-                                <option value="05">秋田県</option>
-                                <option value="06">山形県</option>
-                                <option value="07">福島県</option>
-                                <option value="08">茨城県</option>
-                                <option value="09">栃木県</option>
-                                <option value="10">群馬県</option>
-                                <option value="11">埼玉県</option>
-                                <option value="12">千葉県</option>
-                                <option value="13">東京都</option>
-                                <option value="14">神奈川県</option>
-                                <option value="15">新潟県</option>
-                                <option value="16">富山県</option>
-                                <option value="17">石川県</option>
-                                <option value="18">福井県</option>
-                                <option value="19">山梨県</option>
-                                <option value="20">長野県</option>
-                                <option value="21">岐阜県</option>
-                                <option value="22">静岡県</option>
-                                <option value="23">愛知県</option>
-                                <option value="24">三重県</option>
-                                <option value="25">滋賀県</option>
-                                <option value="26">京都府</option>
-                                <option value="27">大阪府</option>
-                                <option value="28">兵庫県</option>
-                                <option value="29">奈良県</option>
-                                <option value="30">和歌山県</option>
-                                <option value="31">鳥取県</option>
-                                <option value="32">島根県</option>
-                                <option value="33">岡山県</option>
-                                <option value="34">広島県</option>
-                                <option value="35">山口県</option>
-                                <option value="36">徳島県</option>
-                                <option value="37">香川県</option>
-                                <option value="38">愛媛県</option>
-                                <option value="39">高知県</option>
-                                <option value="40">福岡県</option>
-                                <option value="41">佐賀県</option>
-                                <option value="42">長崎県</option>
-                                <option value="43">熊本県</option>
-                                <option value="44">大分県</option>
-                                <option value="45">宮崎県</option>
-                                <option value="46">鹿児島県</option>
-                                <option value="47">沖縄県</option>
-                                <option value="99">国外</option>
-                            </select>
-                        </span>
-                    </p>
-                    <p class="control has-icons-left is-expanded">
-                        <input class="input" type="text" placeholder="例）株式会社リアリゼイション">
-                        <span class="icon is-medium is-left">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </p>
-                    <p class="control is-fullwidth">
-                        <button class="button is-fullwidth">検索</button>
-                    </p>
+                <div class="field is-horizontal search-field">
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons  has-addons-centered">
+                                <p class="control">
+                                    <span class="select">
+                                        <select class="is-hovered">
+                                            <option value="" selected="">全国から</option>
+                                            <option value="01">北海道</option>
+                                            <option value="02">青森県</option>
+                                            <option value="03">岩手県</option>
+                                            <option value="04">宮城県</option>
+                                            <option value="05">秋田県</option>
+                                            <option value="06">山形県</option>
+                                            <option value="07">福島県</option>
+                                            <option value="08">茨城県</option>
+                                            <option value="09">栃木県</option>
+                                            <option value="10">群馬県</option>
+                                            <option value="11">埼玉県</option>
+                                            <option value="12">千葉県</option>
+                                            <option value="13">東京都</option>
+                                            <option value="14">神奈川県</option>
+                                            <option value="15">新潟県</option>
+                                            <option value="16">富山県</option>
+                                            <option value="17">石川県</option>
+                                            <option value="18">福井県</option>
+                                            <option value="19">山梨県</option>
+                                            <option value="20">長野県</option>
+                                            <option value="21">岐阜県</option>
+                                            <option value="22">静岡県</option>
+                                            <option value="23">愛知県</option>
+                                            <option value="24">三重県</option>
+                                            <option value="25">滋賀県</option>
+                                            <option value="26">京都府</option>
+                                            <option value="27">大阪府</option>
+                                            <option value="28">兵庫県</option>
+                                            <option value="29">奈良県</option>
+                                            <option value="30">和歌山県</option>
+                                            <option value="31">鳥取県</option>
+                                            <option value="32">島根県</option>
+                                            <option value="33">岡山県</option>
+                                            <option value="34">広島県</option>
+                                            <option value="35">山口県</option>
+                                            <option value="36">徳島県</option>
+                                            <option value="37">香川県</option>
+                                            <option value="38">愛媛県</option>
+                                            <option value="39">高知県</option>
+                                            <option value="40">福岡県</option>
+                                            <option value="41">佐賀県</option>
+                                            <option value="42">長崎県</option>
+                                            <option value="43">熊本県</option>
+                                            <option value="44">大分県</option>
+                                            <option value="45">宮崎県</option>
+                                            <option value="46">鹿児島県</option>
+                                            <option value="47">沖縄県</option>
+                                            <option value="99">国外</option>
+                                        </select>
+                                    </span>
+                                </p>
+                                <p class="control has-icons-left search-input">
+                                    <input class="input " type="text" placeholder="例）株式会社リアリゼイション">
+                                    <span class="icon is-medium is-left">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </p>
+                                <p class="control">
+                                    <button
+                                        class="px-5 button search-btn is-primary is-outlined is-inverted has-text-weight-bold">検索</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="is-hidden-mobile">
+                    <img src="https://ttzk.graffer.jp/img/corporate-certs/flow.png">
                 </div>
             </div>
-            <div>
-                <img src="https://ttzk.graffer.jp/img/corporate-certs/flow.png">
+        </div>
+    </section>
+    <!-- サービスについて -->
+    <section id="service">
+        <div class="container is-max-widescreen">
+            <div class="mgt-medium">
+                <div class="has-text-centered has-text-primary has-text-weight-bold is-size-5-tablet">
+                    面倒な手続きは一切不要
+                </div>
+                <div class="has-text-centered has-text-weight-bold is-size-4-tablet">登記簿謄本の取り寄せが<br>
+                    初回540円、たった1分でできます</div>
+                <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
+                <div class="mgt-small"><img src="./img/service_1.png" width="600"></div>
+            </div>
+            <hr
+                style="border: 0; height: 1px; background-image: -webkit-linear-gradient(left, #f0f0f0, #999, #f0f0f0); background-image: linear-gradient(left, #f0f0f0, #999, #f0f0f0);">
+        </div>
+    </section>
+    <!-- 特徴 -->
+    <section id="feature">
+        <div class="container is-max-widescreen">
+            <div class="mgt-medium">
+                <div class="columns">
+                    <div class="column">
+                        <div class="has-text-centered has-text-primary has-text-weight-bold is-size-6-tablet">
+                            驚くほどカンタンにウェブで請求
+                        </div>
+                        <div class="has-text-centered has-text-weight-bold is-size-4-tablet">ラクリア法人証明書の3つの特徴
+                        </div>
+                        <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
+                        <div class="columns">
+                            <div class="column">1</div>
+                            <div class="column">2</div>
+                            <div class="column">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="is-divider"></div>
+        </div>
+    </section>
+    <!-- 料金プラン -->
+    <section id="plan">
+        <div class="container is-max-widescreen">
+            <div class="mgt-medium">
+                <div class="has-text-centered has-text-primary has-text-weight-bold subtitle">特徴</div>
+                <div class="has-text-centered title mgt-small">登記簿謄本の取り寄せが<br>
+                    初回540円、たった1分でできます</div>
+                <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
             </div>
         </div>
-    </div>
-    <div class="tile is-ancestor is-11 is-offset-1">
-        <div class="tile is-vertical is-parent">
-            <div class="tile is-child box">
-                <p class="title">One</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                    tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+    </section>
+    <!-- 検索 -->
+    <section class="search-block">
+        <div class="container is-max-widescreen">
+            <div class="mg-small">
+                <div class="is-size-4 search-detail has-text-weight-semibold">
+                    最短1分でご請求
+                </div>
+                <div class="search-detail-sub">住所は不要。社名か法人番号で検索できます。</div>
+                <div class="field is-horizontal search-field">
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons  has-addons-centered">
+                                <p class="control">
+                                    <span class="select">
+                                        <select class="is-hovered">
+                                            <option value="" selected="">全国から</option>
+                                            <option value="01">北海道</option>
+                                            <option value="02">青森県</option>
+                                            <option value="03">岩手県</option>
+                                            <option value="04">宮城県</option>
+                                            <option value="05">秋田県</option>
+                                            <option value="06">山形県</option>
+                                            <option value="07">福島県</option>
+                                            <option value="08">茨城県</option>
+                                            <option value="09">栃木県</option>
+                                            <option value="10">群馬県</option>
+                                            <option value="11">埼玉県</option>
+                                            <option value="12">千葉県</option>
+                                            <option value="13">東京都</option>
+                                            <option value="14">神奈川県</option>
+                                            <option value="15">新潟県</option>
+                                            <option value="16">富山県</option>
+                                            <option value="17">石川県</option>
+                                            <option value="18">福井県</option>
+                                            <option value="19">山梨県</option>
+                                            <option value="20">長野県</option>
+                                            <option value="21">岐阜県</option>
+                                            <option value="22">静岡県</option>
+                                            <option value="23">愛知県</option>
+                                            <option value="24">三重県</option>
+                                            <option value="25">滋賀県</option>
+                                            <option value="26">京都府</option>
+                                            <option value="27">大阪府</option>
+                                            <option value="28">兵庫県</option>
+                                            <option value="29">奈良県</option>
+                                            <option value="30">和歌山県</option>
+                                            <option value="31">鳥取県</option>
+                                            <option value="32">島根県</option>
+                                            <option value="33">岡山県</option>
+                                            <option value="34">広島県</option>
+                                            <option value="35">山口県</option>
+                                            <option value="36">徳島県</option>
+                                            <option value="37">香川県</option>
+                                            <option value="38">愛媛県</option>
+                                            <option value="39">高知県</option>
+                                            <option value="40">福岡県</option>
+                                            <option value="41">佐賀県</option>
+                                            <option value="42">長崎県</option>
+                                            <option value="43">熊本県</option>
+                                            <option value="44">大分県</option>
+                                            <option value="45">宮崎県</option>
+                                            <option value="46">鹿児島県</option>
+                                            <option value="47">沖縄県</option>
+                                            <option value="99">国外</option>
+                                        </select>
+                                    </span>
+                                </p>
+                                <p class="control has-icons-left search-input">
+                                    <input class="input " type="text" placeholder="例）株式会社リアリゼイション">
+                                    <span class="icon is-medium is-left">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </p>
+                                <p class="control">
+                                    <button
+                                        class="px-5 button search-btn is-primary is-outlined is-inverted has-text-weight-bold">検索</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="is-hidden-mobile">
+                    <img src="https://ttzk.graffer.jp/img/corporate-certs/flow.png">
+                </div>
             </div>
-            <div class="tile is-child box">
-                <p class="title">Two</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
-                    tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        </div>
+    </section>
+    <!-- 利用の流れ -->
+    <section id="flow">
+        <div class="container is-max-widescreen mgt-large">
+            <div class="tile is-ancestor is-half">
+                <div class="tile is-vertical is-parent">
+                    <d <d class="tile is-child box">
+                        <p class="title">One</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                            pellentesque
+                            tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                    </d>
+                    <div class="tile is-child box">
+                        <p class="title">Two</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                            pellentesque
+                            tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                    </div>
+
+                    <div class="tile is-child">
+                        <div class="tile is-child box">
+                            <p class="title">Three</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat
+                                pulvinar,
+                                at
+                                pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero
+                                rhoncus
+                                ut.
+                                Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio
+                                felis
+                                ut
+                                quam.</p>
+                            <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
+                                Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
+                                sollicitudin
+                                felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis
+                                hendrerit
+                                sit
+                                amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at
+                                volutpat
+                                tortor.</p>
+                            <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue
+                                lectus
+                                dolor
+                                consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
+                                ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
+                                semper
+                                leo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr
+                style="border: 0; height: 1px; background-image: -webkit-linear-gradient(left, #f0f0f0, #999, #f0f0f0); background-image: linear-gradient(left, #f0f0f0, #999, #f0f0f0);">
+        </div>
+    </section>
+    <!-- 到来のコストと手間 -->
+    <section id="history">
+        <div class="container is-max-widescreen">
+            <div class="mgt-medium">
+                <div class="has-text-centered has-text-primary has-text-weight-bold subtitle">特徴</div>
+                <div class="has-text-centered title mgt-small">登記簿謄本の取り寄せが<br>
+                    初回540円、たった1分でできます</div>
+                <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
+            </div>
+            <hr
+                style="border: 0; height: 1px; background-image: -webkit-linear-gradient(left, #f0f0f0, #999, #f0f0f0); background-image: linear-gradient(left, #f0f0f0, #999, #f0f0f0);">
+        </div>
+    </section>
+    <!-- よくある質問 -->
+    <section id="faq">
+        <div class="container is-max-widescreen">
+            <div class="mgt-medium">
+                <div class="has-text-centered has-text-primary has-text-weight-bold subtitle">特徴</div>
+                <div class="has-text-centered title mgt-small">登記簿謄本の取り寄せが<br>
+                    初回540円、たった1分でできます</div>
+                <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
             </div>
 
-            <div class="tile is-child">
-                <div class="tile is-child box">
-                    <p class="title">Three</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar,
-                        at
-                        pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus
-                        ut.
-                        Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis
-                        ut
-                        quam.</p>
-                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
-                        Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
-                        sollicitudin
-                        felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit
-                        sit
-                        amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at
-                        volutpat
-                        tortor.</p>
-                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus
-                        dolor
-                        consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
-                        ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
-                        semper
-                        leo.</p>
+        </div>
+    </section>
+    <!-- 検索 -->
+    <section class="search-block">
+        <div class="container is-max-widescreen">
+            <div class="mg-small">
+                <div class="is-size-4 search-detail has-text-weight-semibold">
+                    最短1分でご請求
+                </div>
+                <div class="search-detail-sub">住所は不要。社名か法人番号で検索できます。</div>
+                <div class="field is-horizontal search-field">
+                    <div class="field-body">
+                        <div class="field is-expanded">
+                            <div class="field has-addons  has-addons-centered">
+                                <p class="control">
+                                    <span class="select">
+                                        <select class="is-hovered">
+                                            <option value="" selected="">全国から</option>
+                                            <option value="01">北海道</option>
+                                            <option value="02">青森県</option>
+                                            <option value="03">岩手県</option>
+                                            <option value="04">宮城県</option>
+                                            <option value="05">秋田県</option>
+                                            <option value="06">山形県</option>
+                                            <option value="07">福島県</option>
+                                            <option value="08">茨城県</option>
+                                            <option value="09">栃木県</option>
+                                            <option value="10">群馬県</option>
+                                            <option value="11">埼玉県</option>
+                                            <option value="12">千葉県</option>
+                                            <option value="13">東京都</option>
+                                            <option value="14">神奈川県</option>
+                                            <option value="15">新潟県</option>
+                                            <option value="16">富山県</option>
+                                            <option value="17">石川県</option>
+                                            <option value="18">福井県</option>
+                                            <option value="19">山梨県</option>
+                                            <option value="20">長野県</option>
+                                            <option value="21">岐阜県</option>
+                                            <option value="22">静岡県</option>
+                                            <option value="23">愛知県</option>
+                                            <option value="24">三重県</option>
+                                            <option value="25">滋賀県</option>
+                                            <option value="26">京都府</option>
+                                            <option value="27">大阪府</option>
+                                            <option value="28">兵庫県</option>
+                                            <option value="29">奈良県</option>
+                                            <option value="30">和歌山県</option>
+                                            <option value="31">鳥取県</option>
+                                            <option value="32">島根県</option>
+                                            <option value="33">岡山県</option>
+                                            <option value="34">広島県</option>
+                                            <option value="35">山口県</option>
+                                            <option value="36">徳島県</option>
+                                            <option value="37">香川県</option>
+                                            <option value="38">愛媛県</option>
+                                            <option value="39">高知県</option>
+                                            <option value="40">福岡県</option>
+                                            <option value="41">佐賀県</option>
+                                            <option value="42">長崎県</option>
+                                            <option value="43">熊本県</option>
+                                            <option value="44">大分県</option>
+                                            <option value="45">宮崎県</option>
+                                            <option value="46">鹿児島県</option>
+                                            <option value="47">沖縄県</option>
+                                            <option value="99">国外</option>
+                                        </select>
+                                    </span>
+                                </p>
+                                <p class="control has-icons-left search-input">
+                                    <input class="input " type="text" placeholder="例）株式会社リアリゼイション">
+                                    <span class="icon is-medium is-left">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </p>
+                                <p class="control">
+                                    <button
+                                        class="px-5 button search-btn is-primary is-outlined is-inverted has-text-weight-bold">検索</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="is-hidden-mobile">
+                    <img src="https://ttzk.graffer.jp/img/corporate-certs/flow.png">
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+    </section>
     <footer class="footer">
         <div class="content has-text-centered">
-            © Realization, Inc. All Rights Reserved.
-        </div>
+            <div class="columns">
+                <div class="column">
+                    <img src="./img/logo.png" class="logo" width="300px">
+                    <div class="columns mgt-small">
+                        <div class="column">ラクリア法人証明書</div>
+                        <div class="column">関連サイト</div>
+                        <div class="column">運営会社</div>
+                    </div>
+                    <div class="columns mgb-0">
+                        <div class="column">
+                            © Realization, Inc. All Rights Reserved.</div>
+                    </div>
+                </div>
+            </div>
     </footer>
 </body>
 

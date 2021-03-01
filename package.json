@@ -78,5 +78,8 @@
   },
   "style": "bulma/css/bulma.min.css",
   "unpkg": "css/bulma.css",
-  "version": "0.9.2"
+  "version": "0.9.2",
+  "dependencies": {
+    "bulma-extensions": "^6.2.7"
+  }
 }
