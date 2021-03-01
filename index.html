@@ -19,18 +19,6 @@
             },
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
-
-        var request = new XMLHttpRequest();
-
-        request.open('GET', 'https://opendata.resas-portal.go.jp/api/v1/prefectures', true);
-        request.responseType = 'json';
-
-        request.onload = function () {
-            var data = this.response;
-            console.log(data);
-        };
-
-        request.send();
     </script>
 </head>
 
@@ -68,7 +56,7 @@
                     <div class="my-3 is-size-5-desktop is-size-6 has-text-weight-semibold mg-small">
                         <span>法務局に行く面倒な手間・交通費がゼロ！</span><br>たったの1分で法人登記簿謄本をお取り寄せできます。</span>
                     </div>
-                    <div class="is-size-6-desktop is-size-7 mgh-small">
+                    <div class="mgh-small">
                         <span>登記簿謄本の郵送　​</span>
                         <span class="has-text-weight-bold">初回<span class="is-size-5">540</span>円/(税別)</span>
                     </div>
@@ -175,10 +163,10 @@
     <section id="service">
         <div class="container is-max-widescreen">
             <div class="mgt-medium">
-                <div class="has-text-centered has-text-primary has-text-weight-bold is-size-5-tablet">
+                <div class="has-text-centered has-text-primary has-text-weight-bold is-size-7-tablet">
                     面倒な手続きは一切不要
                 </div>
-                <div class="has-text-centered has-text-weight-bold is-size-4-tablet">登記簿謄本の取り寄せが<br>
+                <div class="has-text-centered has-text-weight-bold is-size-4-tablet title">登記簿謄本の取り寄せが<br>
                     初回540円、たった1分でできます</div>
                 <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
                 <div class="mgt-small"><img src="./img/service_1.png" width="600"></div>
@@ -193,10 +181,10 @@
             <div class="mgt-medium">
                 <div class="columns">
                     <div class="column">
-                        <div class="has-text-centered has-text-primary has-text-weight-bold is-size-6-tablet">
+                        <div class="has-text-centered has-text-primary has-text-weight-bold is-size-7-tablet">
                             驚くほどカンタンにウェブで請求
                         </div>
-                        <div class="has-text-centered has-text-weight-bold is-size-4-tablet">ラクリア法人証明書の3つの特徴
+                        <div class="has-text-centered has-text-weight-bold is-size-4-tablet title">ラクリア法人証明書の3つの特徴
                         </div>
                         <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
                         <div class="columns">
@@ -214,10 +202,83 @@
     <section id="plan">
         <div class="container is-max-widescreen">
             <div class="mgt-medium">
-                <div class="has-text-centered has-text-primary has-text-weight-bold subtitle">特徴</div>
-                <div class="has-text-centered title mgt-small">登記簿謄本の取り寄せが<br>
-                    初回540円、たった1分でできます</div>
-                <span>会社の登記簿謄本(登記事項証明書)や法人の印鑑証明書が必要になったら、すぐにオンラインで申請いただけます。<br>法務局の窓口に行かなくても、会社の謄本をインターネットで請求するだけで取得できます。<br>取り寄せは最短1分で完了。登記簿のPDFをwebでダウンロードして閲覧することもできます。</span>
+                <div class="has-text-centered has-text-primary has-text-weight-bold is-size-7-tablet">リーズナブルで安心なお値段
+                </div>
+                <div class="has-text-centered has-text-weight-bold is-size-4-tablet title">料金プラン・手数料</div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="pricing-table">
+                            <div class="pricing-plan is-primary">
+                                <div class="plan-header">登記簿謄本(郵送)</div>
+                                <div class="plan-item">法務局から直接、指定の住所へ郵送します。履歴事項全部証明書まどの各種、登記事項証明書を選べます。速達での郵送も可能。</div>
+                                <div class="plan-items">
+                                    <div class="plan-price">￥980/1通(初回￥450円)</div>
+                                    <div class="plan-item">1〜2日</div>
+                                    <div class="plan-item">100 Domains</div>
+                                    <div class="plan-item">-</div>
+                                    <div class="plan-item">-</div>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="button is-fullwidth">Current plan</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="pricing-plan is-primary">
+                                <div class="plan-header">登記簿謄本(PDF)</div>
+                                <div class="plan-price">￥980/1通(初回￥450円)</div>
+                                <div class="plan-items">
+                                    <div class="plan-item">20GB Storage</div>
+                                    <div class="plan-item">25 Domains</div>
+                                    <div class="plan-item">1TB Bandwidth</div>
+                                    <div class="plan-item">-</div>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="button is-fullwidth">Choose</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+
+                            <div class="pricing-plan is-primary">
+                                <div class="plan-header">印鑑証明書</div>
+                                <div class="plan-price"><span class="plan-price-amount"><span
+                                            class="plan-price-currency">$</span>60</span>/month</div>
+                                <div class="plan-items">
+                                    <div class="plan-item">200GB Storage</div>
+                                    <div class="plan-item">50 Domains</div>
+                                    <div class="plan-item">1TB Bandwidth</div>
+                                    <div class="plan-item">100 Email Boxes</div>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="button is-fullwidth">Choose</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+
+                            <div class="pricing-plan is-danger">
+                                <div class="plan-header">電子証明書</div>
+                                <div class="plan-price"><span class="plan-price-amount"><span
+                                            class="plan-price-currency">$</span>100</span>/month</div>
+                                <div class="plan-items">
+                                    <div class="plan-item">2TB Storage</div>
+                                    <div class="plan-item">100 Domains</div>
+                                    <div class="plan-item">1TB Bandwidth</div>
+                                    <div class="plan-item">1000 Email Boxes</div>
+                                </div>
+                                <div class="plan-footer">
+                                    <button class="button is-fullwidth">Choose</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span>郵送やPDFでのダウンロードから、ぴったりの方法を選ぶことができます。</span>
+                <div class="">合計2通以上請求で10%引き
+                </div>
+                <span class="has-text-weight-light is-size-7 ">※同一請求内で証明書の種類を問わず、合計2通以上をご請求される場合に適用されます。<br>
+                    複数法人のご請求など、異なる請求の場合は割引は適用されません。</span>
             </div>
         </div>
     </section>
